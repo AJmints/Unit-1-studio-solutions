@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<script>
+
+        /* Solution by - Jose */
+        /* Solution by - Jose */
+        /* Solution by - Jose */
+
+        function setSearchEngine(){
+            let form = document.querySelector("#searchForm");
+            return form.engine.value;
+        }
+
+        window.addEventListener("load", function(){
+            let action = {
+                "google": "https://www.google.com/",
+                "duckDuckGo": "https://duckduckgo.com/",
+                "ask": "https://duckduckgo.com/",
+                "bing": "https://www.bing.com/"
+            };
+            let form = document.querySelector("#searchForm");
+            form.addEventListener("submit", function(event){
+                event.preventDefault();
+                let selectedEngine = setSearchEngine();
+                if (action[selectedEngine]) {
+                    let searchTerm = encodeURIComponent(form.q.value); // Encode the search term
+                    let searchURL = action[selectedEngine] + searchTerm;
+                    window.location.href = searchURL;
+                }
+            });
+        });
+
+	</script>
+</head>
+
+<body>
+
+	<form id="searchForm">
+        <input type="text" name="q">input</input>
+        <label>Google<input type="radio" name="engine" value="google"/></label>
+        <label>DuckDuckGo<input type="radio" name="engine" value="duckDuckGo"/></label>
+        <label>Bing<input type="radio" name="engine" value="bing"/></label>
+        <label>Ask<input type="radio" name="engine" value="ask"/></label>
+        <button type="submit" value="Go!">Go!</button>
+	</form>
+
+</body>
+
+<!-- taylor -->
+<!-- ryan -->
+<!-- carl -->
+<!-- bridet -->
