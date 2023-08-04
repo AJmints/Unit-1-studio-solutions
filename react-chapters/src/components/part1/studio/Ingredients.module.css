@@ -1,0 +1,9 @@
+.ingredientList {
+    text-align: left;
+}
+
+/* margin top was added outside of the material */
+.ingredients {
+    margin-left: 10rem;
+    margin-bottom: 3rem;
+}

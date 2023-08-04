@@ -1,0 +1,22 @@
+.recipeAuthorBlock {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin top was added outside of the material */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* This class added outside material */
+.recipeDescription {
+   margin-right: 2rem;
+   margin-left: 2rem;
+}
+    
+.imageUpdates {
+   object-fit: contain;
+}
+
+.recipePhoto {
+   display: flex;
+   justify-content: space-evenly;
+}
